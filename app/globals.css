@@ -2,26 +2,25 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
+@layer base{
+  .i{
+    @apply text-sm border-solid border border-zinc-400 rounded-lg px-3 py-5 focus:focus:outline-none focus:ring-0 focus:border-custom-200;
+  }
+  .e{
+    @apply text-sm border-solid border text-custom-500 border-custom-500 rounded-lg px-3 py-5 focus:focus:outline-none focus:ring-0 ;
+  }
+  .s{
+    @apply text-sm text-custom-500 text-end italic mt-3;
+  }
+  .u{
+    @apply text-sm text-custom-500 text-end italic mt-3 hidden;
   }
 }
 
+
 body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+  background: url("../public/images/bg-intro-desktop.png");
+  background-size: cover;
+  background-color: hsl(0, 100%, 74%) ;
+
 }
